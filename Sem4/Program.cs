@@ -117,7 +117,7 @@ void SredArif (int [] arr4)
     
     for (int i = 0; i < arr4.Length; i++)
     {
-        sum = sum + arr4[i];
+        sum = sum + arr4[i]; //sum += arr[i] то же самое
     }
     double sred = sum / arr4.Length;
     Console.WriteLine($"Среднее арифметическое всех элементов массива равно {sred}");
