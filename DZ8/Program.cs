@@ -130,6 +130,64 @@
 // 18 20
 // 15 18
 
+//
+
+// void PrintArray(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             Console.Write($"{matr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// int[,] FillArray(int m, int n)
+// {
+//     int[,] array = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//             array[i, j] = new Random().Next(1, 10);
+//     }
+//     return array;
+// }
+
+// int[,] MatrixMult(int[,] matr1, int[,] matr2)
+// {
+//     int[,] res = new int[matr2.GetLength(0), matr2.GetLength(1)];
+//     for (int i = 0; i < matr1.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr2.GetLength(1); j++)
+//         {
+//             for (int n = 0; n < matr1.GetLength(0); n++)
+//             {
+//                 res[i, j] += matr1[i, n] * matr2[n, j];
+//             }
+//         }
+//     }
+//     return res;
+// }
+
+// int[,] mas1 = FillArray(2, 2);
+// int[,] mas2 = FillArray(1, 1);
+// if (mas1.GetLength(1) == mas2.GetLength(0)) 
+// {
+//     int[,] result = MatrixMult(mas1,mas2);
+//     PrintArray(mas1);
+//     Console.WriteLine();
+//     PrintArray(mas2);
+//     Console.WriteLine();
+//     PrintArray(result);
+// }
+// else Console.WriteLine ("Некорректный размер матрицы. Число столбцов первой матрицы должно быть равно числу строк второй матрицы");
+
+
+
+
+
 
 
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
@@ -172,21 +230,21 @@
 //             a[i, j] = k;
 //             k++;
 //         }
-    
+
 //         for (i = n + 1; i <= row - n; i++)
 //         {
 //             j = col - n;
 //             a[i, j] = k;
 //             k++;
 //         }
-    
+
 //         for (j = col - n - 1; j >= n; j--)
 //         {
 //             i = row - n;
 //             a[i, j] = k;
 //             k++;
 //         }
-    
+
 //         for (i = row - n - 1; i >= n + 1; i--)
 //         {
 //             j = n;
@@ -202,7 +260,7 @@
 
 // int[,] mas = FillSpiralArray(7, 7);
 // PrintArray(mas);
- 
+
 
 
 
@@ -222,37 +280,37 @@
 // 26(1,0,1) 55(1,1,1)
 
 
-void PrintArray(int[,,] matr)
-{
-    for (int col = 0; col < matr.GetLength(2); col++)
-    {
-        for (int list = 0; list < matr.GetLength(1); list++)
-        {
-            for (int row = 0; row < matr.GetLength(0); row++)
-            {
-            Console.Write($"{matr[list, row, col]} ({list},{row} {col}) " );
-            }
-        Console.WriteLine();
-        };
-    }
-}
+// void PrintArray(int[,,] matr)
+// {
+//     for (int col = 0; col < matr.GetLength(2); col++)
+//     {
+//         for (int list = 0; list < matr.GetLength(1); list++)
+//         {
+//             for (int row = 0; row < matr.GetLength(0); row++)
+//             {
+//             Console.Write($"{matr[list, row, col]} ({list},{row} {col}) " );
+//             }
+//         Console.WriteLine();
+//         };
+//     }
+// }
 
-int[,,] FillArray(int m, int n, int l)
-{
-    int[,,] array = new int[m, n, l];
-    for (int i = 0; i < m; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            for (int k = 0; k < l; k++)
-            {
-                array[i, j, k] = new Random().Next(1, 100);
-            }
-        }
-    } 
-    return array;
-}
+// int[,,] FillArray(int m, int n, int l)
+// {
+//     int[,,] array = new int[m, n, l];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             for (int k = 0; k < l; k++)
+//             {
+//                 array[i, j, k] = new Random().Next(1, 100);
+//             }
+//         }
+//     } 
+//     return array;
+// }
 
 
-int[,,] mas = FillArray(2, 2, 2 );
-PrintArray(mas);
+// int[,,] mas = FillArray(2, 2, 2 );
+// PrintArray(mas);
